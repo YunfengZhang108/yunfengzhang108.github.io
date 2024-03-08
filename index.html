@@ -122,7 +122,17 @@ $(document).ready(function(){
 });
 </script>
 
-
+<script>
+$(document).ready(function(){
+  $("#demo7").on("hide.bs.collapse", function(){
+    $("#showmore7").html('<u>Abstract</u>');
+  });
+  $("#demo7").on("show.bs.collapse", function(){
+    $("#showmore7").html(' <u>Abstract</u>');
+  });
+});
+</script>
+	
 <script>
 $(document).ready(function(){
   $("#demo6").on("hide.bs.collapse", function(){
@@ -706,10 +716,10 @@ Ghent Methusalem Colloquium 2021.
  https://doi.org/10.1007/978-3-031-48579-4_24
 " target="_blank" rel="noopener noreferrer" >book</a>] 
 <br>
- <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo4" id="showmore4">
+ <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo7" id="showmore7">
       <u>Abstract</u>
     </button>
-<div id="demo4" class="collapse">
+<div id="demo7" class="collapse">
 <table   width="100%" class="padding"><tr><td> 
 
 We discuss several open problems on harmonic analysis on compact globally symmetric spaces, and their applications towards nonlinear Schr&#246dinger equations. 
