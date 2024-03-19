@@ -27,6 +27,7 @@
 </script>
 <!--mathjax--> 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
 
 <script type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -1023,7 +1024,7 @@ yunfengzhang108.github.io
 <i>Last updated: 22 Feb. 2024</i>
 </small>
 
-
+<p>This is<span id="word">beautiful</span>.
 
 
 
@@ -1086,9 +1087,18 @@ yunfengzhang108.github.io
 
 
 
-
-
-
+<script>
+$(function () { 
+  count = 0; 
+  wordsArray = ["cool", "amazing", "super"]; 
+  setInterval(function () { 
+    count++; 
+    $("#word").fadeOut(500, function () { 
+      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(500); 
+    }); 
+  }, 2000); 
+}); 
+</script>
 
 
 <script>  
