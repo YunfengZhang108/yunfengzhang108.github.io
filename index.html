@@ -1027,8 +1027,8 @@ yunfengzhang108.github.io
 <br>
 <br>
 	
-<i><span id="word1"> So we beat on, boats against the current, borne back ceaselessly into the past.  </span></i>
-	<span id="word2"> –The Great Gatsby </span>
+<i><span id="word1">The type of mathematics I do was not fashionable at all when I started. It was considered inferior mathematics.</span></i>	
+	<span id="word2"> –Michel Talagrand</span><i><span id="word3"></span></i>
 
 
 
@@ -1097,12 +1097,12 @@ yunfengzhang108.github.io
 $(function () { 
   count1 = 0; 
   wordsArray1 = [
-  
+   "The type of mathematics I do was not fashionable at all when I started. It was considered inferior mathematics.", 
   "So we beat on, boats against the current, borne back ceaselessly into the past.", 
 
   "It is clear from history, though, that it is best to use both analysis and algebra; insight comes from each.",
   
-  "The type of mathematics I do was not fashionable at all when I started. It was considered inferior mathematics.", 
+ 
 	  
   ]; 
   setInterval(function () { 
@@ -1118,20 +1118,41 @@ $(function () {
 
 <script>
 $(function () { 
-  count = 0; 
-  wordsArray = [
-  
-  " –The Great Gatsby", 
+  count2 = 0; 
+  wordsArray2 = [
+   " –Michel Talagrand", 
+  " –F. Scott Fitzgerald in", 
 
-  " –Lie Groups Beyond an Introduction", 
+  " –Anthony W. Knapp in", 
 
-  " –Michel Talagrand", 
+ 
   
   ]; 
   setInterval(function () { 
-    count++; 
+    count2++; 
     $("#word2").fadeOut(1000, function () { 
-      $(this).text(wordsArray[count % wordsArray.length]).fadeIn(1000); 
+      $(this).text(wordsArray2[count2 % wordsArray2.length]).fadeIn(1000); 
+    }); 
+  }, 10000); 
+}); 
+</script>
+
+<script>
+$(function () { 
+  count3 = 0; 
+  wordsArray3 = [
+   "", 
+  "The Great Gatsby", 
+
+  "Lie Groups Beyond an Introduction", 
+
+ 
+  
+  ]; 
+  setInterval(function () { 
+    count3++; 
+    $("#word3").fadeOut(1000, function () { 
+      $(this).text(wordsArray[count3 % wordsArray3.length]).fadeIn(1000); 
     }); 
   }, 10000); 
 }); 
