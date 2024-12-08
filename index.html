@@ -1,21 +1,1215 @@
+HTML Result Skip Results Iframe
 <head>
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--responsive scale-->
-  
-  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!--bootstrap--> 
-  
-  
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400" rel="stylesheet">
-<!--google font--> 
+<meta name=" viewport" content="width=device-width, initial-scale=1">
+    <!--responsive scale-->
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--bootstrap-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!--jquery--> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,400" rel="stylesheet">
+  <!--google font-->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--jquery-->
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+  <!--bootstrap-->
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); 
 </script>
+  <!--mathjax-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!--mathjax-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo0").on("hide.bs.collapse", function() {
+        $("#showmore0").html('Abstract');
+      });
+      $("#demo0").on("show.bs.collapse", function() {
+        $("#showmore0").html('Abstract');
+      });
+    });
+  </script>
+  <!--button style-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo1").on("hide.bs.collapse", function() {
+        $("#showmore1").html('Abstract');
+      });
+      $("#demo1").on("show.bs.collapse", function() {
+        $("#showmore1").html('Abstract');
+      });
+    });
+  </script>
+  <!--button style-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo2").on("hide.bs.collapse", function() {
+        $("#showmore2").html('Abstract');
+      });
+      $("#demo2").on("show.bs.collapse", function() {
+        $("#showmore2").html('Abstract');
+      });
+    });
+  </script>
+  <!--button style-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo3").on("hide.bs.collapse", function() {
+        $("#showmore3").html('Abstract');
+      });
+      $("#demo3").on("show.bs.collapse", function() {
+        $("#showmore3").html('Abstract');
+      });
+    });
+  </script>
+  <!--button style-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo4").on("hide.bs.collapse", function() {
+        $("#showmore4").html('Abstract');
+      });
+      $("#demo4").on("show.bs.collapse", function() {
+        $("#showmore4").html('Abstract');
+      });
+    });
+  </script>
+  <!--button style-->
+
+  <script>
+    $(document).ready(function() {
+      $("#demo5").on("hide.bs.collapse", function() {
+        $("#showmore5").html('Abstract');
+      });
+      $("#demo5").on("show.bs.collapse", function() {
+        $("#showmore5").html('Abstract');
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#demo7").on("hide.bs.collapse", function() {
+        $("#showmore7").html('Abstract');
+      });
+      $("#demo7").on("show.bs.collapse", function() {
+        $("#showmore7").html('Abstract');
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#demo6").on("hide.bs.collapse", function() {
+        $("#showmore6").html('Abstract');
+      });
+      $("#demo6").on("show.bs.collapse", function() {
+        $("#showmore6").html('Abstract');
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#demo8").on("hide.bs.collapse", function() {
+        $("#showmore8").html('Abstract');
+      });
+      $("#demo8").on("show.bs.collapse", function() {
+        $("#showmore8").html('Abstract');
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $("#demo9").on("hide.bs.collapse", function() {
+        $("#showmore9").html('Abstract');
+      });
+      $("#demo9").on("show.bs.collapse", function() {
+        $("#showmore9").html('Abstract');
+      });
+    });
+  </script>
+
+  <!--button style-->
+
+  <script>
+    // to top right away
+    if (window.location.hash) scroll(0, 0);
+    // void some browsers issue
+    setTimeout(function() {
+      scroll(0, 0);
+    }, 1);
+    $(function() {
+      // your current click function
+      $('.scroll').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top + 'px'
+        }, 500, 'swing');
+      });
+      // *only* if we have anchor on the url
+      if (window.location.hash) {
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+          scrollTop: $(window.location.hash).offset().top + 'px'
+        }, 500, 'swing');
+      }
+    });
+    $(document).ready(function() {
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 500, function() {
+            //window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+  <!--smooth scrolling to anchor id-->
+
+  <style>
+    .schedule td {
+      border: 0.5px solid white;
+    }
+
+    < !-- table class -->.header {}
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .sticky+.content {
+      padding-top: 34px;
+    }
+
+    < !-- sticky header-->
+  </style>
+
+  <style>
+    .glyphicon {
+      -webkit-text-stroke: 2px white;
+    }
+
+    < !-- glyphicon weight-->
+  </style>
+
+  <style>
+    .btn {
+      border: none;
+      padding: 0;
+      background: none;
+      font-size: 16px;
+      margin-top: -2.5px;
+    }
+
+    .btn-link {
+      text-decoration: none !important;
+      font-weight: 400;
+    }
+
+    .btn-link {
+      color: #800000;
+      transition: color 0.3s ease;
+      border-bottom: solid 1px;
+      border-bottom-color: white;
+    }
+
+    .btn-link:hover {
+      color: black;
+      border-bottom: solid 1px;
+      border-bottom-color: black;
+    }
+
+    .btn.active.focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn:active:focus,
+    .btn:focus {
+      outline: none;
+      color: #800000;
+    }
+
+    < !--button-->< !--color: #33AAFF;
+    -->
+  </style>
+
+  <style>
+    a {
+      text-decoration: none !important;
+    }
+  </style>
+  <!--link text no decoration-->
+
+  <style>
+    a.d {
+      color: #800000;
+      border-bottom: solid 1px;
+      border-bottom-color: white;
+      transition: 0.3s ease;
+    }
+
+    a.d:hover {
+      color: black;
+      border-bottom: solid 1px;
+      border-bottom-color: black;
+    }
+  </style>
+  <!--link text style-->
+
+  <style>
+    a.b {
+      color: black;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    a.b:hover {
+      color: #800000;
+      font-weight: bold;
+      background: white;
+    }
+
+    a.c {
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    a.c:hover {
+      color: #800000;
+      background: white;
+    }
+
+    a.e {
+      color: black;
+      transition: color 0.3s ease;
+      font-weight: 550;
+    }
+
+    a.e:hover {
+      color: #800000;
+      font-weight: 550;
+      background: white;
+    }
+
+    td.a {
+      border-bottom: 1px solid #800000;
+    }
+  </style>
+  <!--header text style -->
+
+  <style>
+    u {
+      text-decoration: none;
+    }
+
+    u:hover {}
+  </style>
+  <!-- button text style-->
+
+  <style>
+    .padding th {
+      padding: 8px;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .padding td {
+      padding: 8px;
+      font-weight: 400;
+      overflow: hidden;
+    }
+  </style>
+
+  <style>
+    .list td {
+      padding: 4px;
+      font-weight: 400;
+      overflow: hidden;
+    }
+  </style>
+  <!--table class-->
+
+  <style>
+    a.anchor {
+      display: block;
+      position: relative;
+      top: -50px;
+      visibility: hidden;
+    }
+  </style>
+  <!-- anchor reposition-->
+
+  <style>
+    #headercontact {}
+
+    #headerteaching {}
+
+    #headerresearch {}
+
+    #headerabout {}
+  </style>
+  <!--allow responsive header style-->
+
+  <style>
+    .left,
+    .right {
+      width: 60%;
+    }
+
+    .left,
+    .right td {
+      padding: 4px;
+    }
+  </style>
+  <!--align left and right style-->
+
+  <title>Yunfeng Zhang's Home Page</title>
+  <link rel="shortcut icon" href="disk.ico" />
+  <!--title and icon-->
+
+</head>
+
+<body style="font-family:'Open Sans'">
+
+  <div>
+
+    <table width=100%; class="padding">
+
+      <col>
+      <col width=880>
+      <col>
+
+      <tr class="b">
+        <td></td>
+
+        <th>
+
+          <!--
+<a class="c" href="https://www2.math.uconn.edu/~zhang/cndex.html">
+<small>中文</small>
+</a>
+<small>|</small>
+<a class="c" href="https://www2.math.uconn.edu/~zhang">
+<small>English</small>
+</a>
+  -->
+          <h3>
+            Yunfeng Zhang (張雲峯)
+          </h3>
+
+          <a class="c" href="https://math.uconn.edu/" target="_blank" rel="noopener noreferrer">
+            <small> <em>
+
+              </em>
+            </small>
+          </a>
+
+          <!--
+
+<a  href="https://www2.math.uconn.edu/~zhang/cndex.html">
+<img src="china.png" alt="Chinese" width="17" height="17">
+</a>
+
+<a  href="https://www2.math.uconn.edu/~zhang">
+<img src="united-kingdom.png" alt="English" width="17" height="17">
+</a>
+-->
+
+          <br>
+
+        </th>
+
+        <td></td>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div class="header" id="myHeader">
+
+    <table width=100%; class="padding">
+
+      <col>
+      <col width=220>
+      <col width=220>
+      <col width=220>
+      <col width=220>
+
+      <col>
+
+      <tr style="font-size: small; ">
+
+        <td></td>
+
+        <td id="headercontact">
+          <center><a class="b" href="#contact">CONTACT</a></center>
+        </td>
+
+        <td id="headerteaching">
+          <center><a class="b" href="#teaching">TEACHING</a></center>
+        </td>
+
+        <td id="headerresearch">
+          <center><a class="b" href="#research">PAPERS</a></center>
+        </td>
+
+        <td id="headerabout">
+          <center><a class="b" href="#about">ABOUT&nbsp;ME</a></center>
+        </td>
+
+        <td></td>
+
+      </tr>
+
+    </table>
+  </div>
+
+  <div class="content">
+
+    <table width=100%; class="padding">
+
+      <col>
+      <col width=880>
+      <col>
+
+      <tr>
+        <td></td>
+
+        <th>
+
+          <br>
+
+          <a class="anchor" id="about"></a>
+
+          <h3>About Me</h3>
+
+          <br>
+
+          <img src="photo.png" alt="happyme" style="border-radius: 10px;float:right;width:200px;height:200px; 
+margin-left:20px;
+margin-right:50px;
+margin-bottom:20px;
+margin-top:10px;
+border:1px solid black;">
+
+          Welcome to my mathematics page.
+
+          <br><br>
+
+          I am <a class="d" href="https://www.artsci.uc.edu/departments/math/fac-staff.html" target="_blank" rel="noopener noreferrer">currently</a>
+          a visiting assistant professor
+          of <a class="d" href="https://mathshistory.st-andrews.ac.uk/OfTheDay/today/" target="_blank" rel="noopener noreferrer">mathematics</a> at
+          <!--<a class="d" href="https://www.math.pku.edu.cn/kxyj/xsbg/tlb/index.htm" target="_blank" rel="noopener noreferrer" >Peking University</a>
+-->
+          the <a class="d" href="https://sites.google.com/view/ucanalysisandpdeseminar" target="_blank" rel="noopener noreferrer">University of Cincinnati</a>.
+          I received my Ph.D. from <a class="d" href="https://secure.math.ucla.edu/seminars/weekly_list.php" target="_blank" rel="noopener noreferrer">UCLA</a> where I was <a class="d" href="mathgenealogy.pdf" target="_blank" rel="noopener noreferrer">advised</a> by <a class="d" href="https://www.math.ucla.edu/~killip" target="_blank" rel="noopener noreferrer">Rowan Killip</a> and <a class="d" href="https://www.math.ucla.edu/~visan" target="_blank" rel="noopener noreferrer">Monica Visan</a>.
+
+          <br><br>
+
+          I am interested in <a class="d" href="https://press.princeton.edu/books/paperback/9780691090894/representation-theory-of-semisimple-groups" target="_blank" rel="noopener noreferrer">analysis on Lie groups</a> as well as <a class="d" href="https://press.princeton.edu/books/hardcover/9780691032160/harmonic-analysis-pms-43-volume-43" target="_blank" rel="noopener noreferrer">classical Fourier analysis</a>, and related fields such as <a class="d" href="https://bookstore.ams.org/coll-53/" target="_blank" rel="noopener noreferrer">analytic number theory</a> and <a class="d" href="https://bookstore.ams.org/cbms-106" target="_blank" rel="noopener noreferrer">dispersive equations</a>. I am particularly interested in understanding concentration of <a class="d" href="https://bookstore.ams.org/view?ProductCode=CBMS/125" target="_blank" rel="noopener noreferrer">Laplacian eigenfunctions on manifolds</a>.
+
+          <br><br>
+
+          Here is my <a class="d" href="cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>.
+
+          <br>
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <a class="anchor" id="research"></a>
+
+          <h3>Papers</h3>
+
+          <br>
+
+          <!--<ul style="list-style-type:circle">-->
+          <ol reversed start="8">
+
+            <li>
+              (with <a class="d" href="https://sites.google.com/view/saikatulhaque/home" target="_blank" rel="noopener noreferrer">Saikatul Haque</a>, <a class="d" href="https://www.math.ucla.edu/~killip" target="_blank" rel="noopener noreferrer">Rowan Killip</a> and <a class="d" href="https://www.math.ucla.edu/~visan" target="_blank" rel="noopener noreferrer">Monica Visan</a>)
+              <i>
+                Global well-posedness and equicontinuity for mKdV in modulation spaces</i>
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo8" id="showmore8">
+                Abstract &plusmn;
+              </button>]
+              [<a class="d" href=" https://arxiv.org/abs/2411.05300" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+
+              <div id="demo8" class="collapse">
+                <br>
+                We establish global well-posedness for both the defocusing and
+                focusing complex-valued modified Korteweg–de Vries equations on the real line
+                in modulation spaces $\small M^{s,2}_p(\mathbb{R})$, for all $\small 1 \leq p <\infty$ and $\small 0 \leq s < 3/2 − 1/p$. We will also show that such solutions admit global-in-time bounds in these spaces and that equicontinuous sets of initial data lead to equicontinuous ensembles of orbits. Indeed, such information forms a crucial part of our well-posedness argument. </div>
+
+                  <br> <br>
+
+            <li><i>
+                Bounds of restriction of characters to submanifolds</i>
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo7" id="showmore7">
+                Abstract &plusmn;
+              </button>]
+              [<a class="d" href=" https://arxiv.org/abs/2402.03178" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+
+              <div id="demo7" class="collapse">
+                <br>
+                An important approach to the study of concentration of Laplacian eigenfunctions on a compact manifold as the eigenvalue grows to infinity is to bound their restriction to submanifolds. In this paper we take this approach in the setting of a compact Lie group, and provide sharp restriction bounds of general Laplacian eigenfunctions as well as important special ones such as sums of matrix coefficients and in particular characters of irreducible representations of the group. We deal with two classes of submanifolds, namely, maximal flats and all of their submanifolds, and the conjugation-invariant submanifolds. We prove conjecturally sharp asymptotic $\small L^p$ bounds of restriction of general Laplacian eigenfunctions to maximal flats and all of their submanifolds for all $\small p\geq 2$. We also prove sharp asymptotic $\small L^p$ bounds of restriction of characters to maximal tori and all of their submanifolds for all $\small p>0$ and to the conjugation-invariant submanifolds for all $\small p\geq 2$, and of general sums of matrix coefficients to maximal flats and all of their submanifolds for all $\small p\geq 2$.
+
+              </div>
+
+              <br> <br>
+
+            <li>
+              (with <a class="d" href="https://hlfang2106.github.io/" target="_blank" rel="noopener noreferrer">Hanlong Fang</a> and <a class="d" href="https://sites.google.com/a/wisc.edu/xcli/" target="_blank" rel="noopener noreferrer">Xiaocheng Li</a>)
+              <i>Harmonic analysis on the fourfold cover of the space of ordered triangles I: the invariant differentials</i>
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo6" id="showmore6">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="https://arxiv.org/abs/2301.00529" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+              <div id="demo6" class="collapse">
+
+                <br>
+
+                Denote by $\small SL_3(\mathbb R)$ the special linear group of degree 3 over the real numbers, $\small A$ the subgroup consisting of the diagonal matrices with positive entries. In this paper we study the algebraic and analytic properties of the invariant differential operators on the homogeneous space $\small SL_3(\mathbb R)/A$. Firstly, we specify the noncommutative algebra of invariant differential operators in terms of generators and their relations. Secondly, we describe the center of this algebra and prove that all of its symmetric elements are essentially self-adjoint. Thirdly, for the first time on homogeneous spaces, we identify several essentially self-adjoint invariant differential operators which do not lie in the center of the algebra of invariant differential operators.
+
+              </div>
+
+              <br> <br>
+
+            <li><i>
+                Analysis on compact symmetric spaces: eigenfunctions and nonlinear Schr&#246dinger equations</i>
+              <br>
+
+              In: Methusalem Lectures, Trends in Mathematics vol. 3 (2024), 235–240, Birkh&auml;user, Cham.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo5" id="showmore5">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="
+ https://doi.org/10.1007/978-3-031-48579-4_24
+" target="_blank" rel="noopener noreferrer">Book</a>]
+              <div id="demo5" class="collapse">
+                <br>
+
+                We discuss several open problems on harmonic analysis on compact globally symmetric spaces, and their applications towards nonlinear Schr&#246dinger equations.
+
+              </div>
+              <br> <br>
+
+            <li><i>
+                On Fourier restriction type problems on compact Lie groups</i>
+              <br>
+              <a class="d" href="
+https://www.iumj.indiana.edu/
+" target="_blank" rel="noopener noreferrer">Indiana University Mathematics Journal</a> 72 (2023), no. 6, 2631–2699.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo4" id="showmore4">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="
+https://doi.org/10.1512/iumj.2023.72.9317
+" target="_blank" rel="noopener noreferrer">Journal</a>] [<a class="d" href="https://arxiv.org/abs/2005.11451" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+
+              <div id="demo4" class="collapse">
+                <br>
+
+                In this article, we obtain new results for Fourier restriction type problems on compact Lie groups. We first provide a sharp form of $\small L^p$ estimates of irreducible characters in terms of their Laplace&ndash;Beltrami eigenvalue and as a consequence provide some sharp $\small L^p$ estimates of joint eigenfunctions for the ring of bi-invariant differential operators. Then we improve upon the previous range of exponent for scale-invariant Strichartz estimates for the Schr&#246dinger equation, and provide new $\small L^p$ bounds of Laplace&ndash;Beltrami eigenfunctions in terms of their eigenvalue similar to known bounds on tori. A key ingredient in our proof of these results is a barycentric-semiclassical subdivision of the Weyl alcove in a maximal torus. On each component of this subdivision we carry out the analysis of characters and exponential sums, and the circle method of Hardy&ndash;Littlewood and Kloosterman.
+
+              </div>
+
+              <br> <br>
+
+            <li><i>
+                Schr&#246dinger
+                equations on compact globally symmetric spaces</i>
+              <br>
+              <a class="d" href="https://link.springer.com/journal/12220" target="_blank" rel="noopener noreferrer">The Journal of Geometric Analysis</a> 31 (2021), no. 11, 10778–10819.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo3" id="showmore3">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="https://doi.org/10.1007/s12220-021-00664-7" target="_blank" rel="noopener noreferrer">Journal</a>]
+              [<a class="d" href=" https://arxiv.org/abs/2005.00429" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+              <div id="demo3" class="collapse">
+                <br>
+
+                In this article, we establish scale-invariant Strichartz estimates for the Schr&#246dinger equation on
+                arbitrary compact globally symmetric spaces and some bilinear Strichartz estimates on products of rank-one
+                spaces. As applications, we provide local well-posedness results for nonlinear Schr&#246dinger equations on such
+                spaces in both subcritical and critical regularities.
+
+              </div>
+
+              <br> <br>
+
+            <li><i>
+                Strichartz estimates for the Schr&#246dinger
+                equation on products of odd-dimensional spheres</i>
+              <br> <a class="d" href="https://www.sciencedirect.com/journal/nonlinear-analysis" target="_blank" rel="noopener noreferrer">Nonlinear Analysis</a> 199 (2020), 112052, 21 pp.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo2" id="showmore2">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="https://doi.org/10.1016/j.na.2020.112052" target="_blank" rel="noopener noreferrer">Journal</a>] [<a class="d" href="https://arxiv.org/abs/2301.02823" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+              <div id="demo2" class="collapse">
+                <br>
+                We prove Strichartz estimates for the Schr&#246dinger equation which are scale-invariant up to an $\small \varepsilon$-loss on products of odd-dimensional spheres. Namely, for any product of odd-dimensional spheres $\small M=\mathbb{S}^{d_1}\times\cdots\times\mathbb{S}^{d_r}$ (so that $\small M$ is of dimension $\small d=d_1+\cdots+d_r$ and rank $\small r$) equipped with rational metrics, the following Strichartz estimate
+                $$\small
+                \|e^{it\Delta}f\|_{L^p(I\times M)}\leq C_\varepsilon\|f\|_{H^{\frac{d}{2}-\frac{d+2}{p}+\varepsilon}(M)}
+                $$
+                holds for any $\small p\geq 2+\frac{8(s-1)}{sr}$,
+                where
+                $$\small s=\max\left\{\frac{2d_i}{d_i-1}, i=1,\ldots,r\right\}.$$
+
+              </div>
+
+              <br> <br>
+
+            <li><i>Strichartz estimates for the Schr&#246dinger
+                flow on compact Lie groups</i>
+              <br> <a class="d" href="https://msp.org/apde/about/journal/about.html" target="_blank" rel="noopener noreferrer">Analysis & PDE</a> 13 (2020), no. 4, 1173–1219.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo1" id="showmore1">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="https://doi.org/10.2140/apde.2020.13.1173" target="_blank" rel="noopener noreferrer">Journal</a>]
+              [<a class="d" href="https://arxiv.org/abs/1703.07548" target="_blank" rel="noopener noreferrer">ArXiv</a>]
+              <div id="demo1" class="collapse">
+                <br>
+                We establish scale-invariant Strichartz estimates for the Schr&#246dinger flow on any
+                compact Lie group equipped with canonical metrics. The highlights of this paper include an estimate for some
+                Weyl type sums defined on rational lattices, the different decompositions of the Schr&#246dinger kernel determined by how close the points inside the maximal torus are to the cell walls, and an
+                application of the BGG&ndash;Demazure operators or Harish-Chandra's integral formula to the estimate of the
+                difference between characters.
+
+              </div>
+
+              <br> <br>
+
+            <li><i>Strichartz estimates for the Schr&#246dinger
+                flow on compact symmetric spaces</i>
+              <br> Thesis (Ph.D.)–University of California, Los Angeles (2018), 103 pp.
+              <br>
+
+              [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo0" id="showmore0">
+                Abstract &plusmn;
+              </button>] [<a class="d" href="https://www.proquest.com/docview/2054002755?parentSessionId=GYnzFNFEFuPmLXW76j04be6FdX5CxvGi73BBC%2F6aoS0%3D&sourcetype=Dissertations%20&%20Theses" target="_blank" rel="noopener noreferrer">Full Text</a>]
+              <div id="demo0" class="collapse">
+
+                <br>
+
+                This thesis studies scaling critical Strichartz estimates for the Schr&#246dinger flow on compact
+                symmetric spaces. A general scaling critical Strichartz estimate (with an $\small\varepsilon$-loss, respectively)
+                is given conditional on a conjectured dispersive estimate (with an $\small\varepsilon$-loss, respectively) on
+                general compact symmetric spaces. The dispersive estimate is then proved for the special
+                case of connected compact Lie groups. Slightly more generally, for products of connected
+                compact Lie groups and spheres of odd dimension, the dispersive estimate is proved with an
+                $\small\varepsilon$-loss.
+
+              </div>
+
+          </ol>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <a class="anchor" id="teaching"></a>
+
+          <h3>Teaching</h3>
+
+          <br>
+
+          I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=5&what=fullteng&option_lang=eng" target="_blank" rel="noopener noreferrer">teaching</a> MATH 1021, College Algebra in Fall 2024.
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <a class="anchor" id="contact"></a>
+
+          <h3>Contact</h3>
+
+          <br>
+
+          <table class="left">
+            <tr>
+              <td align="right" style="vertical-align:top;">
+                <em>Address: </em>
+              </td>
+              <td align="left" style="vertical-align:top ">
+                Department&nbsp;of&nbsp;Mathematical Sciences
+                <br>University of Cincinnati
+                <br>Cincinnati, OH 45221-0025
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right" style="vertical-align:top">
+                <em>Office: </em>
+              </td>
+              <td align="left" style="vertical-align:top ">
+                5305 French Hall (West)
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right" style="vertical-align:top">
+                <em>Phone: </em>
+              </td>
+              <td align="left" style="vertical-align:top ">
+                (513) 556-4088
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right" style="vertical-align:top "><em>Email: </em>
+              </td>
+              <td align="left" style="vertical-align:top ">
+                zhang8y7@ucmail.uc.edu
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right" style="vertical-align:top "><em>Time Zone: </em>
+              </td>
+              <td align="left" style="vertical-align:top ">
+                Eastern Standard Time UTC−05:00
+              </td>
+            </tr>
+
+          </table>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <small>
+            <i>Last updated: 1 Aug. 2024</i>
+          </small>
+
+          <br>
+          <br>
+
+          <i><span id="word1">Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.</span></i>
+          <br>
+          <span id="word2"> —RICHARD FEYNMANN</span><i><span id="word3"></span></i>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <center>
+            <small>
+              © 2024 Yunfeng Zhang
+            </small>
+          </center>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+          <br>
+
+        </th>
+
+        <td></td>
+
+      </tr>
+
+    </table>
+  </div>
+
+</body>
+
+<!-- 
+
+"Mathematics...; he who does not employ it for himself, will some day find it employed against himself.", 
+
+-->
+
+<script>
+  $(function() {
+    count1 = 0;
+    wordsArray1 = [
+      "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.",
+      "Time was when all the parts of the subject were dissevered, when algebra, geometry, and arithmetic either lived apart or kept up cold relations of acquaintance confined to occasional calls upon one another; but that is now at an end; they are drawn together and are constantly becoming more and more intimately related and connected by a thousand fresh ties, and we may confidently look forward to a time when they shall form but one body with one soul.",
+      "A mathematical argument is, after all, only organized common sense, and it is well that men of science should not always expound their work to the few behind a veil of technical language, but should from time to time explain to a larger public the reasoning which lies behind their mathematical notation.",
+      "Out of nothing I have created a strange new universe.",
+      "Where wisdom reigns, there is no conflict between thinking and feeling.",
+      "The type of mathematics I do was not fashionable at all when I started. It was considered inferior mathematics.",
+      "Science is a differential equation. Religion is a boundary condition.",
+      "Nature is not embarrassed by difficulties of analysis.",
+      "The highest goodness resembles water. Water greatly benefits myriad things without contention. It stays in places that people dislike.",
+      "You are under no obligation to be the same person you were five minutes ago.",
+      "A picture may be worth a thousand words, a formula is worth a thousand pictures.",
+      "Heard melodies are sweet, but those unheard are sweeter.",
+      "A mathematician's reputation rests on the number of bad proofs he has given.",
+      "It takes huge effort to free yourself from memory.",
+      "It would be possible to describe everything scientifically, but it would make no sense; it would be without meaning, as if you described a Beethoven symphony as a variation of wave pressure.",
+      "All mathematics is divided into three parts: cryptography (paid for by CIA, KGB and the like), hydrodynamics (supported by manufacturers of atomic submarines) and celestial mechanics (financed by military and other institutions dealing with missiles, such as NASA).",
+      "The best time for planning a book is while you're doing the dishes.",
+      "A felicitous but unproved conjecture may be of much more consequence for mathematics than the proof of many a respectable theorem.",
+      "One should never try to prove anything that is not almost obvious.",
+      "Certainly the best times were when I was alone with mathematics, free of ambition and pretense, and indifferent to the world.",
+      "I kind of picture mathematics is built on either just two basic concepts that even animals have some awareness of. Space is one, and number is the other.",
+      "All problems in mathematics are psychological.",
+      "God exists since mathematics is consistent, and the Devil exists since we cannot prove it.",
+      "The pendulum of the mind oscillates between sense and nonsense, not between right and wrong.",
+      "It is the pull of opposite poles that stretches souls. And only stretched souls make music.",
+      "The measure of greatness in a scientific idea is the extent to which it stimulates thought and opens up new lines of research.",
+      "No self is of itself alone. It has a long chain of intellectual ancestors... This is not mere allegory, but an eternal memory.",
+      "Whenever we proceed from the known into the unknown we may hope to understand, but we may have to learn at the same time a new meaning of the word 'understanding'.",
+      "In mathematics you don't understand things. You just get used to them.",
+      "We are in a forest whose trees will not fall with a few timid hatchet blows. We have to take up the double-bitted axe and the cross-cut saw, and hope that our muscles are equal to them.",
+      "You cannot hope to build a better world without improving the individuals. To that end, each of us must work for our own improvement and, at the same time, share a general responsibility for all humanity, our particular duty being to aid those to whom we think can be most useful.",
+      "Be impeccable with your word. Don't take anything personally. Don't make assumptions. Always do your best.",
+      "In any field, find the strangest thing and then explore it.",
+      "An expert is a person who has made all the mistakes that can be made in a very narrow field.",
+      "I am interested in mathematics only as a creative art.",
+      "It is true that a mathematician who is not somewhat of a poet will never be a perfect mathematician.",
+      "Physics is like sex: sure, it may give some practical results, but that's not why we do it.",
+      "Concentrate only on the achievements, and ignore the mistakes. When judging a mathematician you should only integrate f+ (the positive part of his function) and ignore the negative part. Perhaps this should apply more generally to all evaluations of your fellow men.",
+      "Our true needs are deeper — yet in our modern society most of us reflexively and relentlessly pursue wealth, consumer goods, and admiration.",
+      "Everybody understood that if the proof is correct, then no other recognition is needed.",
+      "And it soon became clear that the only long-term solution was somehow to make it possible for me to use computers to verify my abstract, logical, and mathematical constructions.",
+      "It's fine to work on any problem, so long as it generates interesting mathematics along the way — even if you don't solve it at the end of the day.",
+      "The ultimate goal of mathematics is to eliminate all need for intelligent thought.",
+      "We are trapped by language to such a degree that every attempt to formulate insight is a play on words.",
+      "I do not know what I may appear to the world, but to myself I seem to have been only like a boy playing on the sea-shore, and diverting myself in now and then finding a smoother pebble or a prettier shell than ordinary, whilst the great ocean of truth lay all undiscovered before me.",
+      "What we know is not much. What we don't know is enormous.",
+      "Let us assume we know nothing, which is a reasonable approximation.",
+      "If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.",
+      "The very effort for rigor forces us to find out simpler methods of proof.",
+      "I will tell you a false proof. But like every fairy tale, it has a kernel of truth.",
+      "Mathematical objects are sometimes as peculiar as the most exotic beast or bird, and the time spent in examining them may be well employed.",
+      "Mathematics is the most beautiful and most powerful creation of the human spirit.",
+      "Analysts are like samurai. They make a cut—shhh! And if it's a good cut, then they can throw a part away. Then they can find a very good formula!",
+      "The first time you go through it, you don’t understand it at all. The second time you go through it, you think you understand it, except for one or two points. The third time you go through it, you know you don't understand it, but by that time you are so used to the subject, it doesn't bother you anymore.",
+      "My view is that mathematics is really very small, there aren't that many great ideas, and people use the same idea over and over again in different contexts.",
+      "The introduction of the cipher 0 or the group concept was general nonsense too, and mathematics was more or less stagnating for thousands of years because nobody was around to take such childish steps ...",
+      "Discovery is the privilege of the child: the child who has no fear of being once again wrong, of looking like an idiot, of not being serious, of not doing things like everyone else.",
+      "If a philosophy is to bring happiness, it should be inspired by kindly feeling.",
+      "In these days the angel of topology and the devil of abstract algebra fight for the soul of every individual discipline of mathematics.",
+      "It is clear from history, though, that it is best to use both analysis and algebra; insight comes from each.",
+      "Before Genesis, God gave the devil free reign to construct much of creation, but dealt with certain matters himself, including semisimple Lie groups.",
+      "I have often pondered over the roles of knowledge or experience, on the one hand, and imagination or intuition, on the other, in the process of discovery. I believe that there is a certain fundamental conflict between the two, and knowledge, by advocating caution, tends to inhibit the flight of imagination. Therefore, a certain naiveté, unburdened by conventional wisdom, can sometimes be a positive asset.",
+      "I have never let my schooling interfere with my education.",
+      "I think very very few schools in the world can even attempt or afford to cultivate children slowly with a necessary care... This has all been done because we have made making a living too big a thing.",
+      "The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.",
+      "The study of mental objects with reproducible properties is called mathematics.",
+      "If you learn to laugh at your own stupidity, all the rubbish in you will turn into manure very fast.",
+      "But to you who are listening I say: Love your enemies, do good to those who hate you. Bless those who curse you, pray for those who mistreat you. If someone slaps you on one cheek, turn to them the other also. If someone takes your coat, do not withhold your shirt from them. Give to everyone who asks you, and if anyone takes what belongs to you, do not demand it back. Do to others as you would have them do to you.",
+      "There is something sublime in the secrecy in which the really great deeds of the mathematician are done.",
+      "The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the cradle of true art and true science.",
+      "Do not think in terms of abundance, think in terms of a fullfilment of life... everything that you can be within yourself, are you or are you not... if we do not do what we can do, we are a disaster.",
+      "I am opposed to textbooks... I find it hateful to give a course where I have to plough my way through chapter after chapter of a given book. The liveliness of the lecture, which is meant to give an impetus to the students, would suffer tremendously.",
+      "Stay mad, but behave like normal people.",
+      "Il xsemble que la perfection soit atteinte non quand il n'y a plus rien à ajouter, mais quand il n'y a plus rien à retrancher.",
+      "Once your physical body, your mind, your emotion and the fundamental life energies are all organized in one direction, anything that you wish happens without even lifting a little finger.",
+      "Fantastic!",
+      "Where there is an observer, separating himself from the thing he observes, there must be conflict. As long as I say, 'Anger is different from me, I must control anger, I must change anger, I must control my thought', in that there is division, therefore there is conflict. Conflict implies suppression, conformity, imitation, all that is involved in that. If you really see the beauty of this, then you can observe the totality of consciousness without analysis.",
+      "The most responsible way to live is that you are playful with life. Only when you are playful, you can pay attention to everything.",
+      "Until you make the unconscious conscious, it will direct your life, and you will call it fate.",
+      "If you move your life from reaction to conscious response, the quality and experience of your life will be entirely determined by you. This is Enlightenment.",
+      "The more the universe seems comprehensible, the more it also seems pointless.",
+      "Close some doors. Not because of pride, incapacity or arrogance, but simply because they no longer lead somewhere.",
+      "The best thing, the foremost thing and the most beautiful thing that you can offer to people around you is you are an evolved human being.",
+      "For me, I am driven by two main philosophies: know more today about the world than I knew yesterday and lessen the suffering of others. You'd be surprised how far that gets you.",
+      "His [David Lynch] theory is that we don't all have to have the same understanding. Different things appeal to different people at different times, and it's not all logical and making perfect sense. But if it's real and true, it links up and you can connect.",
+      "Like a wild animal, the truth is too powerful to remain caged.",
+      "Liberty and love — these two I must have. For my love I'll sacrifice my life. For liberty I'll sacrifice my love.",
+      "Truth for authority, not authority for truth.",
+      "Comparison is the thief of joy.",
+      "Joy is not an achievement. It should be the natural ambience of your life.",
+    ];
+    setInterval(function() {
+      count1++;
+      $("#word1").fadeOut(1000, function() {
+        $(this).text(wordsArray1[count1 % wordsArray1.length]).fadeIn(1000);
+      });
+    }, 10000);
+  });
+</script>
+
+<!-- 
+
+" – JOHANN FRIEDRICH HERBART",
+
+-->
+
+<script>
+  $(function() {
+    count2 = 0;
+    wordsArray2 = [
+      " —RICHARD FEYNMANN",
+      " —JAMES JOSEPH SYLVESTER",
+      " —GEORGE DARWIN",
+      " —JÁNOS BOLYAI",
+      " —CARL GUSTAV JUNG",
+      " —MICHEL TALAGRAND",
+      " —ALAN TURING",
+      " —AUGUSTIN-JEAN FRESNEL",
+      " —LAOZI",
+      " —ALAN WATTS",
+      " —EDSGER W. DIJKSTRA",
+      " —JOHN KEATS",
+      " —ABRAM BESICOVITCH",
+      " —PAUL COELHO",
+      " —ALBERT EINSTEIN",
+      " —VLADIMIR ARNOLD",
+      " —AGATHA CHRISTIE",
+      " —ATLE SELBERG",
+      " —ALEXANDRE GROTHENDIECK",
+      " —ROBERT LANGLANDS",
+      " —DENNIS SULLIVAN",
+      " —PIERRE DELIGNE",
+      " —ANDRÉ WEIL",
+      " —CARL GUSTAV JUNG",
+      " —ERIC HOFFER",
+      " —PAUL DIRAC",
+      " —ERWIN SCHRÖDINGER",
+      " —WERNER HEISENBERG",
+      " —JOHN VON NEUMANN",
+      " —ROBERT LANGLANDS",
+      " —MARIE CURIE",
+      " —DON MIGUEL RUIZ",
+      " —JOHN ARCHIBALD WHEELER",
+      " —NIELS BOHR",
+      " —G. H. HARDY",
+      " —KARL WEIERSTRASS",
+      " —RICHARD FEYNMANN",
+      " —ANTONI ZYGMUND",
+      " —WILLIAM THURSTON",
+      " —GRIGORI PERELMAN",
+      " —VLADIMIR VOEVODSKY",
+      " —ANDREW WILES",
+      " —RONALD GRAHAM",
+      " —NIELS BOHR",
+      " —ISAAC NEWTON",
+      " —PIERRE-SIMON LAPLACE",
+      " —DAVID KAZHDAN",
+      " —ALBERT EINSTEIN",
+      " —DAVID HILBERT",
+      " —DAVID KAZHDAN",
+      " —HUGO STEINHAUS",
+      " —STEFAN BANACH",
+      " —HEISUKE HIRONAKA",
+      " —ARNOLD SOMMERFELD",
+      " —PETER SARNAK",
+      " —ALEXANDRE GROTHENDIECK",
+      " —ALEXANDRE GROTHENDIECK",
+      " —BERTRAND RUSSELL",
+      " —HERMANN WEYL",
+      " —ANTHONY W. KNAPP in LIE GROUPS BEYOND AN INTRODUCTION",
+      " —CLAUDE CHEVALLEY",
+      " —HARISH-CHANDRA",
+      " —MARK TWAIN",
+      " —SADHGURU",
+      " —ISAAC ASIMOV",
+      " —PHILIP J. DAVIS & REUBEN HERSH",
+      " —SADHGURU",
+      " —LUKE 6:27-31",
+      " —THOMAS HILL",
+      " —ALBERT EINSTEIN",
+      " —SADHGURU",
+      " —EMIL ARTIN",
+      " —PAUL COELHO",
+      " —ANTOINE DE SAINT-EXUPÉRY",
+      " —SADHGURU",
+      " —THE NINTH DOCTOR",
+      " —JIDDU KRISHNAMURTI",
+      " —SADHGURU",
+      " —CARL GUSTAV JUNG",
+      " —SADHGURU",
+      " —STEVEN WEINBERG",
+      " —PAUL COELHO",
+      " —SADHGURU",
+      " —NEIL DEGRASSE TYSON",
+      " —NAOMI WATTS",
+      " —VERONICA ROTH",
+      " —SÁNDOR PETŐFI",
+      " —LUCRETIA MOTT",
+      " —THEODORE ROOSEVELT",
+      " —SADHGURU",
+    ];
+    setInterval(function() {
+      count2++;
+      $("#word2").fadeOut(1000, function() {
+        $(this).text(wordsArray2[count2 % wordsArray2.length]).fadeIn(1000);
+      });
+    }, 10000);
+  });
+</script>
+
+<script>
+  window.onscroll = function() {
+    myFunction()
+  };
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+</script>
+<!--sticky header-->
+
+<script>
+  var aboutOffset = $("#about").offset();
+  var abouttop = aboutOffset.top;
+  var researchOffset = $("#research").offset();
+  var researchtop = researchOffset.top;
+  var teachingOffset = $("#teaching").offset();
+  var teachingtop = teachingOffset.top;
+  var contactOffset = $("#contact").offset();
+  var contacttop = contactOffset.top;
+  $(window).scroll(function() {
+    var value = $(window).scrollTop() + 1;
+    if (value >= abouttop)
+      $("#headerabout").css({
+        "background-color": "white",
+        "font-color": "black",
+        "border-bottom": "solid 1px black"
+      });
+    else
+      $("#headerabout").css({
+        "background-color": "white",
+        "font-color": "black",
+        "font-weight": "normal",
+        "border-bottom": "solid 1px white"
+      });
+    if (value >= abouttop)
+      $("#headerresearch").css({
+        "background-color": "white",
+        "font-color": "black",
+        "border-bottom": "solid 1px black"
+      });
+    else
+      $("#headerresearch").css({
+        "background-color": "white",
+        "font-weight": "normal",
+        "border-bottom": "solid 1px white"
+      });
+    if (value >= abouttop)
+      $("#headerteaching").css({
+        "background-color": "white",
+        "font-color": "black",
+        "border-bottom": "solid 1px black "
+      });
+    else
+      $("#headerteaching").css({
+        "background-color": "white",
+        "font-weight": "normal",
+        "border-bottom": "solid 1px white"
+      });
+    if (value >= abouttop)
+      $("#headercontact").css({
+        "background-color": "white",
+        "font-color": "black",
+        "border-bottom": "solid 1px black "
+      });
+    else
+      $("#headercontact").css({
+        "background-color": "white",
+        "font-weight": "normal",
+        "border-bottom": "solid 1px white"
+      });
+  });
+</script>
+
+<!--responsive header when scrolling-->
+
+<!--
+<script type='text/javascript'>
+// one-time reload 
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload(); 
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
+-->
