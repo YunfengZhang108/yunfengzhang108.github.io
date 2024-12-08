@@ -951,29 +951,29 @@ $(window).scroll( function()
 {
     var value = $(window).scrollTop() + 1;
 	
-    if ( value  < researchtop && value >= abouttop )
+    if ( value  >= abouttop )
 	
-	 $("#headerabout").css({"background-color":"white", "font-color":"black", "border-bottom": "solid 1.5px white"} );
+	 $("#headerabout").css({"background-color":"white", "font-color":"black", "border-bottom": "solid 1px black"} );
     else
-        $("#headerabout").css({"background-color":"white", "font-color":"black", "font-weight":"normal", "border-bottom": "solid 1.5px white"  });
+        $("#headerabout").css({"background-color":"white", "font-color":"black", "font-weight":"normal", "border-bottom": "solid 1px white"  });
 	
       
 		
-	if ( value  >= researchtop && value < teachingtop )
-	 $("#headerresearch").css({"background-color":"white", "font-color":"black", "border-bottom": "solid 1.5px white" });
+	if ( value  >= abouttop  )
+	 $("#headerresearch").css({"background-color":"white", "font-color":"black", "border-bottom": "solid  1px black" });
     else
-        $("#headerresearch").css({"background-color":"white","font-weight":"normal", "border-bottom": "solid 1.5px white" });
+        $("#headerresearch").css({"background-color":"white","font-weight":"normal", "border-bottom": "solid 1px white" });
         
 		
-if ( value >= teachingtop  && value < contacttop )
-$("#headerteaching").css({"background-color":"white", "font-color":"black", "border-bottom": "solid 1.5px white"  });
+if ( value >= abouttop   )
+$("#headerteaching").css({"background-color":"white", "font-color":"black", "border-bottom": "solid  1px black"  });
     else
-         $("#headerteaching").css({"background-color":"white", "font-weight":"normal", "border-bottom": "solid 1.5px white" });
+         $("#headerteaching").css({"background-color":"white", "font-weight":"normal", "border-bottom": "solid 1px white" });
        
-if ( value >= contacttop )
- $("#headercontact").css({"background-color":"white","font-color":"black", "border-bottom": "solid 1.5px white" } );
+if ( value >= abouttop )
+ $("#headercontact").css({"background-color":"white","font-color":"black", "border-bottom": "solid  1px black" } );
     else
-        $("#headercontact").css({"background-color":"white", "font-weight":"normal", "border-bottom": "solid 1.5px white" });
+        $("#headercontact").css({"background-color":"white", "font-weight":"normal", "border-bottom": "solid 1px white" });
 		
 		});
 </script>
