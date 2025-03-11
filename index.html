@@ -94,6 +94,20 @@ $(document).ready(function(){
   });
 });
 </script>
+  
+  
+<script>
+$(document).ready(function(){
+  $("#demo6").on("hide.bs.collapse", function(){
+    $("#showmore6").html('Abstract');
+  });
+  $("#demo6").on("show.bs.collapse", function(){
+    $("#showmore6").html('Abstract');
+  });
+});
+</script>
+  
+  
 <script>
 $(document).ready(function(){
   $("#demo7").on("hide.bs.collapse", function(){
@@ -105,16 +119,9 @@ $(document).ready(function(){
 });
 </script>
 	
-<script>
-$(document).ready(function(){
-  $("#demo6").on("hide.bs.collapse", function(){
-    $("#showmore6").html('Abstract');
-  });
-  $("#demo6").on("show.bs.collapse", function(){
-    $("#showmore6").html('Abstract');
-  });
-});
-</script>
+
+  
+  
 <script>
 $(document).ready(function(){
   $("#demo8").on("hide.bs.collapse", function(){
@@ -125,6 +132,7 @@ $(document).ready(function(){
   });
 });
 </script>
+  
 <script>
 $(document).ready(function(){
   $("#demo9").on("hide.bs.collapse", function(){
@@ -392,7 +400,6 @@ Yunfeng Zhang (張雲峯)
 <br>
 <a class="anchor" id="about"></a>
 
-	
 <br>
 <img src="photo.png" alt="happyme" style="border-radius: 10px;float:right;width:200px;height:200px; 
 margin-left:20px;
@@ -428,7 +435,26 @@ Here is my <a class="d" href="cv.pdf" target="_blank" rel="noopener noreferrer">
 <h3 >Papers</h3>
 <br>
 <!--<ul style="list-style-type:circle">-->
-<ol reversed start="8">
+<ol reversed start="9">
+  
+<li>
+
+<i>
+Local well-posedness for nonlinear Schr&#246dinger equations on compact product manifolds</i>
+	<br>
+	
+[<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo9" id="showmore9">
+      Abstract &plusmn;
+    </button>]
+	[<a class="d" href=" https://arxiv.org/abs/2503.08300" target="_blank" rel="noopener noreferrer" >ArXiv</a>] 
+<div id="demo9" class="collapse">
+<br>
+We prove new local well-posedness results for nonlinear Schr&#246dinger equations posed on a general product of spheres and tori, by the standard approach of multi-linear Strichartz estimates. To prove these estimates, we establish and utilize multi-linear bounds for the joint spectral projector associated to the Laplace&ndash;Beltrami operators on all the individual sphere factors of the product manifold. To treat the particular case of a product of two spheres at critical regularity, we prove a sharp $\small L^\infty_xL^p_t$ estimate of the solution of the linear Schr&#246dinger equation on the two-torus. 
+</div>
+<br> <br>
+	
+    
+  
 <li>
 (with <a class="d" href="https://sites.google.com/view/saikatulhaque/home" target="_blank" rel="noopener noreferrer" >Saikatul Haque</a>, <a class="d" href="https://www.math.ucla.edu/~killip" target="_blank" rel="noopener noreferrer" >Rowan Killip</a> and <a class="d" href="https://www.math.ucla.edu/~visan" target="_blank" rel="noopener noreferrer" >Monica Visan</a>) 
 <i>
@@ -450,6 +476,9 @@ argument.
 </div>
 <br> <br>
 	
+  
+  
+  
 <li><i>
 Bounds of restriction of characters to submanifolds</i>
 	<br>
