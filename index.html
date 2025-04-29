@@ -317,6 +317,14 @@ a.anchor {
 .left, .right { width: 60%;}
 .left, .right td {padding: 4px;}
 </style>
+  
+<style>  
+@media (max-width: 450px) {
+  img#myImage {
+    display: none;
+  }
+}
+  </style>
 <!--align left and right style-->
 <title>Yunfeng Zhang's Home Page</title> 
 <link rel="shortcut icon" href="disk.ico" />
@@ -401,7 +409,7 @@ Yunfeng Zhang (張雲峯)
 <a class="anchor" id="about"></a>
 
 <br>
-<img src="photo.png" alt="happyme" style="border-radius: 10px;float:right;width:200px;height:200px; 
+<img id="myImage" src="photo.png" alt="happyme" style="border-radius: 10px;float:right;width:200px;height:200px; 
 margin-left:20px;
 margin-right:50px;
 margin-bottom:20px;
@@ -1115,6 +1123,8 @@ $(function () {
 " —THEODORE ROOSEVELT",
     
 " —SADHGURU",
+    
+    
     
   ]; 
   setInterval(function () { 
