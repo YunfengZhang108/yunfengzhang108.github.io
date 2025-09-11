@@ -143,6 +143,17 @@ $(document).ready(function(){
   });
 });
 </script>
+  
+  <script>
+$(document).ready(function(){
+  $("#demo10").on("hide.bs.collapse", function(){
+    $("#showmore10").html('Abstract');
+  });
+  $("#demo10").on("show.bs.collapse", function(){
+    $("#showmore10").html('Abstract');
+  });
+});
+</script>
 	
 <!--button style--> 
 <script>
@@ -443,10 +454,28 @@ Here is my <a class="d" href="cv.pdf" target="_blank" rel="noopener noreferrer">
 <h3 >Papers</h3>
 <br>
 <!--<ul style="list-style-type:circle">-->
-<ol reversed start="9">
+<ol reversed start="10">
   
 <li>
-
+  (with Yangkendi Deng and <a class="d" href="https://pure.bit.edu.cn/en/persons/zehua-zhao" target="_blank" rel="noopener noreferrer" >Zehua Zhao</a>) 
+<i>
+Sharp bilinear eigenfunction estimate, $\small L^\infty_{x_2}L^p_{t,x_1}$-type Strichartz estimate, and energy-critical NLS</i>
+	<br>
+	
+[<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo10" id="showmore10">
+      Abstract &plusmn;
+    </button>]
+	[<a class="d" href=" https://arxiv.org/abs/" target="_blank" rel="noopener noreferrer" >ArXiv</a>] 
+<div id="demo10" class="collapse">
+<br>
+We establish <em>sharp</em> bilinear and multilinear eigenfunction estimates for the Laplace–Beltrami operator on the standard three-sphere $\small \mathbb{S}^3$, eliminating the logarithmic loss that has persisted in the literature since the pioneering work of Burq, G&eacute;rard, and Tzvetkov over twenty years ago. This completes the theory of multilinear eigenfunction estimates on the standard spheres. 
+Our approach relies on viewing $\small \mathbb{S}^3$ as the compact Lie group $\small \mathrm{SU}(2)$ and exploiting its representation theory, especially the properties of  Clebsch–Gordan coefficients.
+Motivated by application to the energy-critical nonlinear Schr&#246dinger equation (NLS) on $\small \mathbb{R} \times \mathbb{S}^3$, we also prove a refined Strichartz estimate of mixed-norm type $\small L^\infty_{x_2}L^4_{t,x_1}$ on the cylindrical space $\small \mathbb{R}_{x_1} \times \mathbb{T}_{x_2}$, adapted to certain spectrally localized functions. Combining these two ingredients, we derive a refined bilinear Strichartz estimate on $\small \mathbb{R} \times \mathbb{S}^3$, which in turn yields small data global well-posedness for the above mentioned NLS in the energy space.
+</div>
+<br> <br>
+	
+    
+<li>
 <i>
 Local well-posedness for nonlinear Schr&#246dinger equations on compact product manifolds</i>
 	<br>
