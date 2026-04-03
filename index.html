@@ -855,15 +855,27 @@ Eastern Daylight Time UTC−04:00
 -->
 <br>
 
-	
-<i id="quote"></i>
+<div id="quote"></div>
+
 <style>
-#quote .quote-author {
+#quote {
+
+}
+
+.quote-text {
+  display: block;
+  font-style: italic;
+}
+
+.quote-author {
   display: block;
   margin-top: 0.5em;
   font-style: normal;
 }
 </style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <script>
 $(function () {
   let count = 0;
@@ -1235,26 +1247,31 @@ $(function () {
     }
   ];
 
+
   function renderQuote(index) {
     $("#quote").html(
-      quotes[index].text +
-      "<br><span class='quote-author'>" +
-      quotes[index].author +
-      "</span>"
+      "<span class='quote-text'>" + quotes[index].text + "</span>" +
+      "<span class='quote-author'>" + quotes[index].author + "</span>"
     );
   }
 
+  // initial render
   renderQuote(0);
 
+  // rotation with fade
   setInterval(function () {
     count = (count + 1) % quotes.length;
+
     $("#quote").fadeOut(1000, function () {
       renderQuote(count);
       $(this).fadeIn(1000);
     });
+
   }, 10000);
 });
 </script>
+	
+
 
   
 <br>
