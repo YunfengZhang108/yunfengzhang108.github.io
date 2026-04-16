@@ -181,6 +181,17 @@ $(document).ready(function(){
 });
 </script> 
   
+    <script>
+$(document).ready(function(){
+  $("#demo13").on("hide.bs.collapse", function(){
+    $("#showmore13").html('Abstract');
+  });
+  $("#demo13").on("show.bs.collapse", function(){
+    $("#showmore13").html('Abstract');
+  });
+});
+</script> 
+  
 	
 <!--button style--> 
 <script>
@@ -495,14 +506,29 @@ Here is my <a class="d" href="CV.pdf" target="_blank" rel="noopener noreferrer">
 <h3 >Papers</h3>
 <br>
 <!--<ul style="list-style-type:circle">-->
-<ol reversed start="12">
+<ol reversed start="13">
  
+<li>
+<i>
+Pointwise character bounds: the case of $\small \mathrm{SU}(3)$ </i>
+	<br>
+	
+[<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo13" onclick="togglePM(this)" id="showmore13">
+      Abstract <span>+</span>
+    </button>]
+	[<a class="d" href="https://arxiv.org/abs/ " target="_blank" rel="noopener noreferrer" >ArXiv</a>] 
+<div id="demo13" class="collapse">
+<br>
+We present a basic pointwise bound for the irreducible characters of $\small \mathrm{SU}(3)$ and, as an application, derive new $\small L^p$ bounds for these characters.
+</div>
+<br> <br>
+	
+  
 <li>
 (with <a class="d" href="https://sites.google.com/view/saikatulhaque/home" target="_blank" rel="noopener noreferrer" >Saikatul Haque</a>, <a class="d" href="https://www.math.ucla.edu/~killip" target="_blank" rel="noopener noreferrer" >Rowan Killip</a> and <a class="d" href="https://www.math.ucla.edu/~visan" target="_blank" rel="noopener noreferrer" >Monica Visan</a>)   
 <i>
 Growth of Fourier–Lebesgue norms for mKdV</i>
 	<br>
-	
 [<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#demo12" onclick="togglePM(this)" id="showmore12">
       Abstract <span>+</span>
     </button>]
