@@ -998,19 +998,6 @@ I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=
 
 </script>
 
-<script id="abstract-mathematics">
-(function () {
-  "use strict";
-  if (!window.jQuery) return;
-  window.jQuery(document).on("shown.bs.collapse", ".paper-abstract", function () {
-    // Recalculate hidden mathematics once its abstract has a visible width.
-    if (window.MathJax && window.MathJax.Hub) {
-      window.MathJax.Hub.Queue(["Rerender", window.MathJax.Hub, this]);
-    }
-  });
-}());
-</script>
-
 <script id="quotation-rotation">
 (function () {
   "use strict";
