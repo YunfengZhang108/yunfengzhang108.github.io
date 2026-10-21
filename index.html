@@ -770,7 +770,7 @@ I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=
 <script id="site-navigation">
 /* Assumes a sticky #myHeader nav and real sections with matching anchor IDs.
  * CSS: section[id] { scroll-margin-top: var(--nav-offset, 5rem); }
- * Keep href navigation native; no scroll resets or click interception.
+ * Header clicks scroll without changing the URL; hrefs remain as a fallback.
  */
 (function () {
   "use strict";
@@ -836,6 +836,124 @@ I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=
       window.requestAnimationFrame(update);
     }
   }
+
+  var navigationScroll = null;
+  var navigationDuration = 1200;
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function stopNavigationScroll() {
+    if (!navigationScroll) return;
+    window.cancelAnimationFrame(navigationScroll.frame);
+    var style = document.documentElement.style;
+    if (navigationScroll.previousBehavior) {
+      style.setProperty("scroll-behavior", navigationScroll.previousBehavior,
+        navigationScroll.previousPriority);
+    } else {
+      style.removeProperty("scroll-behavior");
+    }
+    navigationScroll = null;
+  }
+
+  function sectionScrollTop(section) {
+    var scroller = document.scrollingElement || document.documentElement;
+    var offset = Math.ceil(nav.getBoundingClientRect().height) + 16;
+    var top = section.getBoundingClientRect().top + scroller.scrollTop - offset;
+    var maximum = Math.max(0, scroller.scrollHeight - document.documentElement.clientHeight);
+    return Math.max(0, Math.min(top, maximum));
+  }
+
+  function focusSection(section) {
+    if (!section.hasAttribute("tabindex")) {
+      section.setAttribute("tabindex", "-1");
+      section.addEventListener("blur", function () {
+        section.removeAttribute("tabindex");
+      }, { once: true });
+    }
+    section.focus({ preventScroll: true });
+  }
+
+  function scrollToSection(section) {
+    stopNavigationScroll();
+    update();
+    var scroller = document.scrollingElement || document.documentElement;
+    var startTop = scroller.scrollTop;
+    var startLeft = window.pageXOffset;
+    var style = document.documentElement.style;
+    var operation = {
+      frame: null,
+      previousBehavior: style.getPropertyValue("scroll-behavior"),
+      previousPriority: style.getPropertyPriority("scroll-behavior")
+    };
+    navigationScroll = operation;
+    // The frame animation owns the speed; avoid a second CSS smooth scroll.
+    style.setProperty("scroll-behavior", "auto");
+
+    function finish() {
+      stopNavigationScroll();
+      focusSection(section);
+      queueUpdate();
+    }
+
+    var targetTop = sectionScrollTop(section);
+    if (reducedMotion.matches || Math.abs(targetTop - startTop) < 1) {
+      window.scrollTo(startLeft, targetTop);
+      finish();
+      return;
+    }
+
+    var startedAt = null;
+    function step(timestamp) {
+      if (navigationScroll !== operation) return;
+      if (startedAt === null) startedAt = timestamp;
+      var progress = Math.min(1, (timestamp - startedAt) / navigationDuration);
+      var eased = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      // Fonts, mathematics, or an open abstract can move the destination.
+      var destination = sectionScrollTop(section);
+      window.scrollTo(startLeft, startTop + (destination - startTop) * eased);
+      queueUpdate();
+      if (progress < 1) {
+        operation.frame = window.requestAnimationFrame(step);
+      } else {
+        finish();
+      }
+    }
+    operation.frame = window.requestAnimationFrame(step);
+  }
+
+  entries.forEach(function (entry) {
+    entry.link.addEventListener("click", function (event) {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey ||
+          event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      // Clear an existing section fragment without adding a history entry.
+      if (entries.some(function (item) { return item.link.hash === window.location.hash; })) {
+        try {
+          window.history.replaceState(window.history.state, "",
+            window.location.pathname + window.location.search);
+        } catch (error) {
+          // Local-file previews can restrict the History API; scrolling still works.
+        }
+      }
+      scrollToSection(entry.section);
+    });
+  });
+
+  window.addEventListener("wheel", stopNavigationScroll, { passive: true });
+  window.addEventListener("touchstart", stopNavigationScroll, { passive: true });
+  window.addEventListener("pointerdown", stopNavigationScroll, { passive: true });
+  window.addEventListener("pagehide", stopNavigationScroll);
+  window.addEventListener("keydown", function (event) {
+    if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "PageUp", "PageDown",
+         "Home", "End", " ", "Spacebar", "Tab", "Escape"].indexOf(event.key) !== -1) {
+      stopNavigationScroll();
+    }
+  });
+  if (reducedMotion.addEventListener) {
+    reducedMotion.addEventListener("change", stopNavigationScroll);
+  }
+
 
   window.addEventListener("scroll", queueUpdate, { passive: true });
   window.addEventListener("resize", queueUpdate);
