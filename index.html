@@ -721,8 +721,13 @@ I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=
   <dd>311 Hume Hall</dd>
   <dt>Email:</dt>
   <dd><a href="mailto:yzhang19@olemiss.edu">yzhang19@olemiss.edu</a></dd>
-  <dt>Time Zone:</dt>
-  <dd>Central Daylight Time UTC−05:00</dd>
+
+<dt>Local Time:</dt>
+<dd>
+  <time id="central-clock" style="font-variant-numeric: tabular-nums;"></time>
+  (Central Time)
+</dd>
+
 </dl>
     <br>
     <br>
@@ -782,6 +787,29 @@ I am <a class="d" href="https://www.mathnet.ru/php/getFT.phtml?jrnid=rm&paperid=
   </div>
 </footer>
 
+
+<script>
+(function () {
+  const clock = document.getElementById("central-clock");
+
+  const formatter = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true
+  });
+
+  function updateClock() {
+    clock.textContent = formatter.format(new Date());
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+})();
+</script>
+
+  
 <script id="site-navigation">
 /* Assumes a sticky #myHeader nav and real sections with matching anchor IDs.
  * CSS: section[id] { scroll-margin-top: var(--nav-offset, 5rem); }
